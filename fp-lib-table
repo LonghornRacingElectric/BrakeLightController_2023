@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "Global Libraries")(type "KiCad")(uri "${KIPRJMOD}/2023KicadLibrary/Global Libraries.pretty")(options "")(descr ""))
+)

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "Global_Library")(type "KiCad")(uri "${KIPRJMOD}/2023KicadLibrary/Global Symbols/Global_Library.kicad_sym")(options "")(descr ""))
+)
