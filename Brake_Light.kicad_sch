@@ -314,58 +314,6 @@
         )
       )
     )
-    (symbol "power:+12V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (id 0) (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+12V" (id 1) (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (id 2) (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (id 3) (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "power-flag" (id 4) (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"+12V\"" (id 5) (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+12V_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default) (color 0 0 0 0))
-          (fill (type none))
-        )
-      )
-      (symbol "+12V_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+12V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "power:+24V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (id 0) (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -670,7 +618,7 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid d9b7dcbe-051e-4641-86c0-f7eb63d5e531)
   )
-  (wire (pts (xy 82.55 152.4) (xy 82.55 153.67))
+  (wire (pts (xy 82.55 147.32) (xy 82.55 153.67))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid fd441758-f8a9-4f58-bc14-dbd8a4931b7b)
   )
@@ -778,6 +726,22 @@
     (pin "1" (uuid e756a07e-7723-4941-8d0f-105cc2fc920d))
   )
 
+  (symbol (lib_id "power:+24V") (at 82.55 137.16 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid 517b2523-0ed7-47ce-96b0-62547732ef64)
+    (property "Reference" "#PWR0101" (id 0) (at 82.55 140.97 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+24V" (id 1) (at 82.55 133.5842 0))
+    (property "Footprint" "" (id 2) (at 82.55 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 82.55 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid bd17d6c8-f13e-48ef-bf2c-ea31422c7718))
+  )
+
   (symbol (lib_id "Transistor_FET:AO3400A") (at 80.01 142.24 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 656e5837-d97f-4479-a6b9-651c8f111c91)
@@ -814,22 +778,6 @@
     (pin "1" (uuid 7f50cfa8-1d9b-4bcb-a824-fd9b92a9891b))
   )
 
-  (symbol (lib_id "power:+12V") (at 82.55 137.16 0) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
-    (uuid 7a9b31f6-7595-47cf-a050-1ae8cfca436e)
-    (property "Reference" "#PWR04" (id 0) (at 82.55 140.97 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+12V" (id 1) (at 82.55 133.5842 0))
-    (property "Footprint" "" (id 2) (at 82.55 137.16 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (id 3) (at 82.55 137.16 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a35f3189-2908-418e-a112-62c235688906))
-  )
-
   (symbol (lib_id "Connector_Generic:Conn_01x06") (at 53.34 64.77 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 9d79e094-aaa6-4feb-91ef-0cf13df74fc3)
@@ -858,7 +806,7 @@
     (property "Value" "2k" (id 1) (at 67.31 138.4269 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 71.12 137.16 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 71.12 137.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 71.12 137.16 0)
@@ -877,7 +825,7 @@
     (property "Value" "1k5" (id 1) (at 66.04 148.59 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 71.12 147.32 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 71.12 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 71.12 147.32 0)
@@ -901,25 +849,6 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 6238b903-3877-49e6-b60d-8987ba26aec7))
-  )
-
-  (symbol (lib_id "Device:R_Small") (at 82.55 149.86 0) (unit 1)
-    (in_bom yes) (on_board yes)
-    (uuid cd6f1af6-5e59-489a-90ef-46e1edd90692)
-    (property "Reference" "R3" (id 0) (at 83.82 149.86 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10k" (id 1) (at 77.47 149.86 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 82.55 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (id 3) (at 82.55 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 79de592a-4380-430c-905b-7192016f69fd))
-    (pin "2" (uuid cc77b97b-6c47-4ddd-bae6-1c5cd25a9bee))
   )
 
   (symbol (lib_id "power:GND") (at 71.12 149.86 0) (unit 1)
@@ -1244,9 +1173,6 @@
     (path "/d9bf1388-ba4a-46dc-aef3-ce9f74f1dd92"
       (reference "#PWR03") (unit 1) (value "GND") (footprint "")
     )
-    (path "/7a9b31f6-7595-47cf-a050-1ae8cfca436e"
-      (reference "#PWR04") (unit 1) (value "+12V") (footprint "")
-    )
     (path "/76196397-99a2-41c3-86bb-f323bd352b60"
       (reference "#PWR05") (unit 1) (value "GND") (footprint "")
     )
@@ -1394,14 +1320,8 @@
     (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/ae12db24-42ec-4184-8368-5c1eac6137a6"
       (reference "#PWR053") (unit 1) (value "GND") (footprint "")
     )
-    (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/e3d4b6f4-7568-4362-a6f5-e771c20073a3"
-      (reference "#PWR054") (unit 1) (value "+3V3") (footprint "")
-    )
     (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/afbf2d05-fe67-4c2e-a005-9c54d1179aaa"
       (reference "#PWR055") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/89f96146-3093-4e58-9926-55f2523468b9"
-      (reference "#PWR056") (unit 1) (value "+3V3") (footprint "")
     )
     (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/7e6b00cf-9689-4efe-962f-92dbaa1d217b"
       (reference "#PWR057") (unit 1) (value "GND") (footprint "")
@@ -1435,6 +1355,15 @@
     )
     (path "/4b3960a9-3979-4ced-9a60-8a8791847dc9/e0873a35-5920-46f8-92b4-30e4adebd454/ac0291f8-e8f6-4edd-9863-45227d905649"
       (reference "#PWR067") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/517b2523-0ed7-47ce-96b0-62547732ef64"
+      (reference "#PWR0101") (unit 1) (value "+24V") (footprint "")
+    )
+    (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/e311d513-65d4-4ab1-9091-8e7ff9217008"
+      (reference "#PWR?") (unit 1) (value "+3V3") (footprint "")
+    )
+    (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/f323bd76-41aa-4d9e-8b8f-c99d6a6502ef"
+      (reference "#PWR?") (unit 1) (value "+3V3") (footprint "")
     )
     (path "/29639228-78f8-4f5b-8652-d63c64ba8913/00000000-0000-0000-0000-00006343a469"
       (reference "C1") (unit 1) (value "4u7") (footprint "Capacitor_SMD:C_0603_1608Metric")
@@ -1506,7 +1435,7 @@
       (reference "D1") (unit 1) (value "RED") (footprint "LED_SMD:LED_0603_1608Metric")
     )
     (path "/29639228-78f8-4f5b-8652-d63c64ba8913/03bb6952-8654-4c84-bec4-48dc9118f988"
-      (reference "D2") (unit 1) (value "DT1446-04TS-7") (footprint "SOT95P280X100-6N")
+      (reference "D2") (unit 1) (value "DT1446-04TS-7") (footprint "Global Libraries:SOT95P280X100-6N")
     )
     (path "/29639228-78f8-4f5b-8652-d63c64ba8913/96af04c7-0dd8-4324-89bc-82ee00f61136"
       (reference "D3") (unit 1) (value "SMLVN6RGB") (footprint "LED_SMD:LED_ROHM_SMLVN6")
@@ -1566,13 +1495,10 @@
       (reference "Q1") (unit 1) (value "AO3400A") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/ace78a4d-9441-4350-b054-4de2210fc7c9"
-      (reference "R1") (unit 1) (value "2k") (footprint "")
+      (reference "R1") (unit 1) (value "2k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/bd15a47c-4079-4b6b-8d0b-d9ac69731a22"
-      (reference "R2") (unit 1) (value "1k5") (footprint "")
-    )
-    (path "/cd6f1af6-5e59-489a-90ef-46e1edd90692"
-      (reference "R3") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R2") (unit 1) (value "1k5") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/29639228-78f8-4f5b-8652-d63c64ba8913/00000000-0000-0000-0000-00006353dea1"
       (reference "R4") (unit 1) (value "2k2") (footprint "Resistor_SMD:R_0603_1608Metric")
@@ -1689,13 +1615,13 @@
       (reference "U3") (unit 1) (value "SN65HVD230") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
     )
     (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/87cb97e9-836e-4fb8-8473-bf8302a52584"
-      (reference "U4") (unit 1) (value "LM393") (footprint "Package_SO:SOIC-8-N7_3.9x4.9mm_P1.27mm")
+      (reference "U4") (unit 1) (value "LM393") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
     )
     (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/c5177256-8ac6-4beb-b6f6-fbb4e57619be"
-      (reference "U4") (unit 2) (value "LM393") (footprint "Package_SO:SOIC-8-N7_3.9x4.9mm_P1.27mm")
+      (reference "U4") (unit 2) (value "LM393") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
     )
     (path "/599b7a84-d6d4-475d-aa4b-696e962196c6/6a89753f-d7ff-4b02-9da8-c831b305bced"
-      (reference "U4") (unit 3) (value "LM393") (footprint "Package_SO:SOIC-8-N7_3.9x4.9mm_P1.27mm")
+      (reference "U4") (unit 3) (value "LM393") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
     )
     (path "/4b3960a9-3979-4ced-9a60-8a8791847dc9/5eef7685-46e3-4490-b1c3-d367d5bf00e5/8cd40687-f12d-4487-81ad-e4b3943431ac"
       (reference "U5") (unit 1) (value "LMR51420") (footprint "Package_TO_SOT_SMD:SOT-23-6")
